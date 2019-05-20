@@ -93,7 +93,8 @@ class twoboxColMDP:
         # Tb2 = beliefTransitionMatrix(gamma2, epsilon2, nq, eta)
         #Tb1 = beliefTransitionMatrixGaussian(gamma1, epsilon1, self.nq, sigmaTb)
         #Tb2 = beliefTransitionMatrixGaussian(gamma2, epsilon2, self.nq, sigmaTb)
-        self.Trans_belief_obs1, self.Obs_emis_trans1, self.den1 = beliefTransitionMatrixGaussianCol(gamma1, epsilon1, qmin,                                                                                           qmax, Ncol, self.nq)
+        self.Trans_belief_obs1, self.Obs_emis_trans1, self.den1 = beliefTransitionMatrixGaussianCol(gamma1, epsilon1, qmin,
+                                                                                                    qmax, Ncol, self.nq)
         #self.Trans_hybrid_obs1 = np.zeros(((NumCol, self.n, self.n)))
         #for i in range(NumCol):
         #    self.Trans_hybrid_obs1[i] = kronn(Tr, self.Trans_belief_obs1[i]).T
@@ -101,7 +102,8 @@ class twoboxColMDP:
         Tb1 = Trans_belief1 / np.tile(np.sum(Trans_belief1, 0), (self.nq, 1))
 
 
-        self.Trans_belief_obs2, self.Obs_emis_trans2, self.den2 = beliefTransitionMatrixGaussianCol(gamma2, epsilon2, qmin,                                                                                                qmax, Ncol, self.nq)
+        self.Trans_belief_obs2, self.Obs_emis_trans2, self.den2 = beliefTransitionMatrixGaussianCol(gamma2, epsilon2, qmin,
+                                                                                                    qmax, Ncol, self.nq)
         #self.Trans_hybrid_obs2 = np.zeros(((NumCol, self.n, self.n)))
         #for i in range(NumCol):
         #    self.Trans_hybrid_obs2[i] = kronn(Tr, self.Trans_belief_obs2[i]).T

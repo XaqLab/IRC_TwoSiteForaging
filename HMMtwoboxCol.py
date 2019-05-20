@@ -69,48 +69,6 @@ class HMMtwoboxCol:
 
         return alpha
 
-    def forward_act_est(self, obs):
-        T = obs.shape[0]        # length of a sample sequence
-
-        act = obs[:, 0]   # action, two possible values: 0: doing nothing; 1: press button
-        rew = obs[:, 1]   # observable, two possible values: 0 : not have; 1: have
-        loc = obs[:, 2]   # location, three possible values
-        col1 = obs[:, 3]  # color of the 1st box
-        col2 = obs[:, 4]  # color of the 2nd box
-
-        alpha = np.zeros((self.S, T))  # initialize alpha value for each belief value
-        ## (0,0)(0,1)...(0,Ss-1)(1,0)(1,1)..(1,Ss-1)....
-        alpha[:, 0] = self.pi * self.B[act[0], self._states(rew[0], loc[0])]
-
-        belief_vector = np.array(
-            [np.arange(0, 1, 1 / self.Ss) + 1 / self.Ss / 2, 1 - np.arange(0, 1, 1 / self.Ss) - 1 / self.Ss / 2])
-
-        for t in range(1, T):
-            if act[t - 1] == pb and loc[t - 1] == 1 and col1[t] == self.Ncol:
-                obs1Emi = np.ones(self.Ss)
-                obs2Emi = self.D2[col2[t]].dot(belief_vector)
-                obsEmi = np.reshape(np.outer(obs1Emi, obs2Emi), self.S)
-                alpha[:,  t] = np.dot(alpha[:, t - 1] * obsEmi, self.A[act[t - 1]][
-                    np.ix_(self._states(rew[t-1], loc[t-1]), self._states(rew[t], loc[t]))]) \
-                           * self.B[act[t], self._states(rew[t], loc[t])]
-            elif  act[t - 1] == pb and loc[t - 1] == 2 and col2[t] == self.Ncol:
-                obs1Emi = self.D1[col1[t]].dot(belief_vector)
-                obs2Emi = np.ones(self.Ss)
-                obsEmi = np.reshape(np.outer(obs1Emi, obs2Emi), self.S)
-                alpha[:, t] = np.dot(alpha[:, t - 1] * obsEmi, self.A[act[t - 1]][
-                    np.ix_(self._states(rew[t - 1], loc[t - 1]), self._states(rew[t], loc[t]))]) \
-                              * self.B[act[t], self._states(rew[t], loc[t])]
-            else:
-                obs1Emi = self.D1[col1[t]].dot(belief_vector)
-                obs2Emi = self.D2[col2[t]].dot(belief_vector)
-                obsEmi = np.reshape(np.outer(obs1Emi, obs2Emi), self.S)
-                alpha[:, t] = np.dot(alpha[:, t - 1] * obsEmi,
-                                     self.C[col1[t]][col2[t]][act[t-1]][
-                                         np.ix_(self._states(rew[t - 1], loc[t - 1]), self._states(rew[t], loc[t]))]) \
-                              * self.B[act[t], self._states(rew[t], loc[t])]
-
-        return alpha
-
     def backward(self, obs):
         """
         Backward path
@@ -395,9 +353,11 @@ class HMMtwoboxCol:
                 Trantemp = Cnew[col1[t+1]][col2[t+1]][act[t]][np.ix_(self._states(rew[t], loc[t]), self._states(rew[t + 1], loc[t+1]))]
             Qaux2 += np.sum(np.log( Trantemp + 10 ** -13 * (Trantemp == 0)) * xi[t, :, :])
 
+
         for t in range(T):
             Qaux3 += np.sum(np.log(Bnew[act[t], self._states(rew[t], loc[t])] +
                                    10 ** -13 * (Bnew[act[t], self._states(rew[t], loc[t])] == 0)) * gamma[:, t])
+
 
         belief_vector = np.array(
             [np.arange(0, 1, 1 / self.Ss) + 1 / self.Ss / 2, 1 - np.arange(0, 1, 1 / self.Ss) - 1 / self.Ss / 2])
@@ -419,7 +379,7 @@ class HMMtwoboxCol:
             Qaux4 += np.sum(np.log(obsEmi) * gamma[:, t])
 
 
-        Qaux = 1 * (Qaux1 + Qaux2) + 1 * Qaux3 + Qaux4
+        Qaux = 1 * (Qaux1 + Qaux2) + 1 * Qaux3
 
         return Qaux
 

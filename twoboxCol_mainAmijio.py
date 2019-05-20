@@ -152,17 +152,17 @@ def main():
 
     #parameters_gen = [0.1,0.1,0.01,0.01,0.05,0.2,0.3,5,0.4,0.6]
 
-    obsN, latN, truthN, datestring = twoboxColGenerate(parametersAgent, parametersExp, sample_length = 5000, sample_number = 1, nq = 5)
+    # obsN, latN, truthN, datestring = twoboxColGenerate(parametersAgent, parametersExp, sample_length = 5000, sample_number = 1, nq = 5)
     # sys.stdout = logger.Logger(datestring)
     # output will be both on the screen and in the log file
     # No need to manual interaction to specify parameters in the command line
     # but the log file will be written at the end of the execution.
 
-    # dataN_pkl_file = open(path + '/Results/04302019(0246)_dataN_twoboxCol.pkl', 'rb')
-    # dataN_pkl = pickle.load(dataN_pkl_file)
-    # dataN_pkl_file.close()
-    # obsN = dataN_pkl['observations']
-    # latN = dataN_pkl['beliefs']
+    dataN_pkl_file = open(path + '/Results/04302019(0246)_dataN_twoboxCol.pkl', 'rb')
+    dataN_pkl = pickle.load(dataN_pkl_file)
+    dataN_pkl_file.close()
+    obsN = dataN_pkl['observations']
+    latN = dataN_pkl['beliefs']
 
     ######## Hyper-parameters ###############################
     parameterMain_dict = {'E_MAX_ITER': E_MAX_ITER,
