@@ -8,10 +8,11 @@ path = os.getcwd()
 
 E_MAX_ITER = 300       # 100    # maximum number of iterations of E-step
 GD_THRESHOLD = 0.01   # 0.01      # stopping criteria of M-step (gradient descent)
-E_EPS = 10 ** -2                  # stopping criteria of E-step
-M_LR_INI = 4 * 10 ** -4           # initial learning rate in the gradient descent step
+E_EPS = 10 ** -4                  # stopping criteria of E-step
+M_LR_INI = 5 * 10 ** -5           # initial learning rate in the gradient descent step
 LR_DEC =  4                       # number of times that the learning rate can be reduced
 SaveEvery = 10
+alpha_rate = 20
 
 def twoboxColGenerate(parameters, parametersExp, sample_length, sample_number, nq, nr = 2, nl = 3, na = 5, discount = 0.99):
     # datestring = datetime.strftime(datetime.now(), '%Y-%m-%d-%H-%M-%S')
@@ -170,6 +171,8 @@ def main():
                           'E_EPS': E_EPS,
                           'M_LR_INI': M_LR_INI,
                           'LR_DEC': LR_DEC,
+                          'Save_every':SaveEvery ,
+                          'Armijio_step':alpha_rate,
                           'ParaInitial': [np.array(list(map(float, i.strip('[]').split(',')))) for i in
                                           sys.argv[3].strip('()').split('-')]
                           #'ParaInitial': [np.array(list(map(float, i.strip('[]').split(',')))) for i in
@@ -177,7 +180,7 @@ def main():
                           # Initial parameter is a set that contains arrays of parameters, here only consider one initial point
                           }
 
-    output1 = open(datestring + '_ParameterMain_twoboxCol' + '.pkl', 'wb')
+    output1 = open(path + '/' + datestring + '_ParameterMain_twoboxCol' + '.pkl', 'wb')
     pickle.dump(parameterMain_dict, output1)
     output1.close()
     ##############################################################
@@ -191,7 +194,7 @@ def main():
     parameters_iniSet = parameterMain_dict['ParaInitial']
 
     ### read real para from data file
-    pkl_parafile = open(datestring + '_para_twoboxCol' + '.pkl', 'rb')
+    pkl_parafile = open(path + '/Results/04302019(0246)_para_twoboxCol' + '.pkl', 'rb')
     #pkl_parafile = open(path + '/Results/04302019(0246)_para_twoboxCol' + '.pkl', 'rb')
     para_pkl = pickle.load(pkl_parafile)
     pkl_parafile.close()
@@ -391,9 +394,9 @@ def main():
 
                     min_cll_temp = complete_likelihood_new_temp
 
-                    while complete_likelihood_new_temp < complete_likelihood_new + 0.5 * alpha * learnrate * \
+                    while complete_likelihood_new_temp < complete_likelihood_new + 0.2 * alpha * learnrate * \
                             np.array(derivative_value).dot(np.array(derivative_value)):
-                        alpha /= 8
+                        alpha /= alpha_rate
                         para_temp = parameters_new + alpha * learnrate * np.array(derivative_value)
 
                         ## Check the ECDLL (old posterior, new parameters)
