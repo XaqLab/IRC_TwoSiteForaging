@@ -1,2 +1,2 @@
 # IRC_TwoSiteForaging
-IRC for twobox task with sensory cues
+Inverse Rational Control for two-site foraging task with ambiguous sensory cues.
