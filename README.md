@@ -2,11 +2,13 @@
 Inverse Rational Control for two-site foraging task with ambiguous sensory cues.
 See paper at http://xaqlab.com/wp-content/uploads/2019/09/RationalThoughts.pdf for mathematical details.
 
+# Dependency
 The MDP toolbox needs to be installed to run the codes. https://pymdptoolbox.readthedocs.io/en/latest/index.html
 ```
 pip install pymdptoolbox
 ```
 
+# Files
 * boxtask_func.py
   define functions used in the project 
   
@@ -33,4 +35,13 @@ pip install pymdptoolbox
   generate the behavior of the trained neural network in a new task
   
 * twoCol_NN_main_generalization.py
-  main file for teacher data generating, neural network training, and neural network behavior data generating
+  main file for teacher data generating, neural network training, and neural network behavior data generating. 
+  Three timestamps are recorded in this file: time when the teacher POMDP data is generated, time when the neural netowrk is trained, time when the neural network runs in a closed-loop for behaviro analysis. 
+  
+* NNagent_IRC_01262020(170602).ipynb
+  The notebook that runs the inverse rational control(IRC) and saves the results. 
+  The timestamps from the twoCol_NN_main_generalization.py file will be used to indicate the data that is used. By passing the correspinding timestamps, the specific data will be used to run the IRC. 
+  
+ * NNagent_IRCfromFile-01262020(170602).ipynb
+  Since it takes a long time to run the IRC algorithms. If one would like to check the IRC results based on the saved IRC results file, runing this file generates the figures. 
+  
