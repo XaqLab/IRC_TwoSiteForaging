@@ -2,6 +2,11 @@
 Inverse Rational Control for two-site foraging task with ambiguous sensory cues.
 See paper at http://xaqlab.com/wp-content/uploads/2019/09/RationalThoughts.pdf for mathematical details.
 
+The MDP toolbox needs to be installed to run the codes. https://pymdptoolbox.readthedocs.io/en/latest/index.html
+```
+pip install pymdptoolbox
+```
+
 * boxtask_func.py
   define functions used in the project 
   
