@@ -243,7 +243,7 @@ def _col2im_distinct(R, size, width):
 
 
 def _col2im_sliding(R, size, width):
-    '*********** This is not the same in Matlab, need to be modified later *****************'
+    '*********** This is not the same in Matlab*****************'
     R = R.T
     dy, dx = size
     xsz = width-dx+1
@@ -333,8 +333,10 @@ i    '''
 
 
 def softmax(x, t):
-    # transform the value of a vector x to softmax
-    # beta is the te,perature parameter
+    """
+    transform the value of a vector x to softmax
+    beta is the temperature parameter
+    """
     z = np.exp(x/t)
     z = z / np.max(z)
     return z / np.sum(z)
@@ -360,16 +362,20 @@ def QfromV_pi(PolicyIteration):
 
 
 def find_closest(array, value):
+    """
     # array is vector
     # value is scalar
     # find the closest point to value in the array
-
+    """
     array = np.asarray(array)
     idx = (np.abs(array - value)).argmin()
     return array[idx]
 
 
 def find_closest_array(array, values):
+    """
+    both array and values are vectors, find the elements in the array that are closest to elements in the values
+    """
     output = np.zeros(values.shape)
     for i in range(values.shape[0]):
         output[i] = find_closest(array, values[i])
@@ -378,6 +384,9 @@ def find_closest_array(array, values):
 
 
 def rmv_dup_arrary(x):
+    """
+    remove duplicate elements from array
+    """
     uniques = []
     for arr in x:
         if not any(np.array_equal(arr, unique_arr) for unique_arr in uniques):
