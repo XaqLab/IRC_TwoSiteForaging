@@ -7,7 +7,9 @@ from scipy.integrate import quad
 from scipy import optimize
 
 def kronn(*args):
-    # returns multidimensional kronecker product of all matrices in the argument list
+    """
+    returns multidimensional kronecker product of all matrices in the argument list
+    """
     z = args[0]
     for i in range(1, len(args)):
         z = np.kron(z, args[i])

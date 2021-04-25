@@ -40,8 +40,7 @@ def main():
     else:
         # parameters = [gamma1, gamma2, epsilon1, epsilon2,
         #              groom, travelCost, pushButtonCost, NumCol, qmin, qmax, temperature]
-        #delta = 0.06 for appearing rates, delta = 0.1 for color, delta = 0.1 for costs, temperature 0.05
-        #
+
         parametersAgent_set = [[0.17, 0.1, 0.1, 0.03, 0.2, 0.15, 0.3, 5, 0.45, 0.55, 0.1]]
 
         np.random.seed(seed=0)
@@ -66,9 +65,8 @@ def main():
         for i, parametersAgent in enumerate(parametersAgent_set):
             print("The %d -th set of parameter." % (i + 1))
 
-            # parametersAgent = [0.15,0.1,0.1,0.05,0.2,0.15,0.3,5,0.45,0.55, 0.1]
             parametersExp = parametersAgent[0:4] + parametersAgent[-3:-1]
-            # parametersExp = [0.2,0.15,0.05,0.04,0.45,0.5]
+            # no model mismatch, the internal model and the experiment setup is consistent
 
             Numcol = parametersAgent[7]
 
@@ -191,17 +189,9 @@ def main():
     if generateNN:
         test_N = 5
         test_T = 20000
-        # parametersAgent_test = [0.15, 0.1, 0.1, 0.05, 0.2, 0.15, 0.3, 5, 0.48, 0.53, 0.1]
-        # parametersExp_test = [0.2, 0.15, 0.05, 0.04, 0.45, 0.5]
 
         parametersAgent_test = [0.17, 0.1, 0.1, 0.03, 0.2, 0.15, 0.3, 5, 0.45, 0.55, 0.1]
         parametersExp_test = [0.2, 0.12, 0.05, 0.07, 0.4, 0.6]
-
-        # parametersAgent_test = [0.2, 0.2, 0.1, 0.1, 0.2, 0.15, 0.3, 5, 0.4, 0.6, 0.1]
-        # parametersExp_test = [0.1, 0.1, 0.05, 0.04, 0.2, 0.8]
-
-        #parametersExp_test = parametersAgent[0:4] + parametersAgent[-3:-1]
-
 
         NNtest_params = [nq, na, nr, nl, Numcol, discount, parametersAgent_test, parametersExp_test]
         """
@@ -269,21 +259,6 @@ def main():
         data_output = open(path + '/Results/' + datestring_train  + '_data' + datestring_start + '_agentNNdriven' + datestring_NNagent + '_twoboxCol' + '.pkl', 'wb')
         pickle.dump(data_dict, data_output)
         data_output.close()
-
-        # data_dict1 = agent_NNandPOMDP_POMDP(rnn, NNtest_params, nn_params, N=test_N, T=test_T)
-        # datestring_NNagent1 = datetime.strftime(datetime.now(), '%m%d%Y(%H%M%S)')
-        # data_output1 = open(path + '/Results/' + datestring_train + '_data' + datestring_start + '_agentPOMDPdriven' + datestring_NNagent1 + '_twoboxCol' + '.pkl', 'wb')
-        # pickle.dump(data_dict1, data_output1)
-        # data_output1.close()
-
-        # data_dict2 = agent_NN(rnn, NNtest_params, nn_params, N=test_N, T=test_T)
-        # datestring_NNagent2 = datetime.strftime(datetime.now(), '%m%d%Y(%H%M%S)')
-        # data_output2 = open(
-        #     path + '/Results/' + datestring_train + '_data' + datestring_start + '_agentNN' + datestring_NNagent2 + '_twoboxCol' + '.pkl',
-        #     'wb')
-        # pickle.dump(data_dict2, data_output2)
-        # data_output2.close()
-
 
         nn_para_dict = {'nn_params': nn_params,
                         'training_params': training_params,

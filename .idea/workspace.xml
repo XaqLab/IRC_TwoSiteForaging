@@ -1,78 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="10c326ab-5958-4180-b018-112a4ba0a1b3" name="Default" comment="">
+    <list default="true" id="f4f42286-6f5e-4324-918e-6b77aa5345dd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/IRC_TwoSiteForaging.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Code0516.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HMMtwoboxCol.py" beforeDir="false" afterPath="$PROJECT_DIR$/HMMtwoboxCol.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POMDP_generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/POMDP_generate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boxtask_func.py" beforeDir="false" afterPath="$PROJECT_DIR$/boxtask_func.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twoboxCol_mainAmijio.py" beforeDir="false" afterPath="$PROJECT_DIR$/twoboxCol_mainAmijio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twoCol_NN_main_generalization.py" beforeDir="false" afterPath="$PROJECT_DIR$/twoCol_NN_main_generalization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twoboxCol.py" beforeDir="false" afterPath="$PROJECT_DIR$/twoboxCol.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Code0516$twoboxCol_mainAmijio.coverage" NAME="twoboxCol_mainAmijio Coverage Results" MODIFIED="1558474267873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <expand />
-    <select />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>path = os.getcwd()</find>
-      <find>path</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1UQynLHunEZNG4MhDRgKxCtD2jE" />
+  <component name="ProjectId" id="1rZre0q5phskIG8cEhbcCn336HX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Python" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
-    <configuration name="twoboxCol_mainAmijio" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Code0516" />
+  <component name="RunManager" selected="Python.POMDP_generate">
+    <configuration name="POMDP_generate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="IRC_TwoSiteForaging" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$USER_HOME$/opt/anaconda3/bin/python3.8" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/twoboxCol_mainAmijio.py" />
-      <option name="PARAMETERS" value="[0.2,0.15,0.1,0.08,0.2,0.2,0.3,5,0.42,0.66] [0.15,0.1,0.05,0.04,0.4,0.6] ([0.31275818,0.26348243,0.07912555,0.07925631,0.11290874,0.23273988,0.58827792,5,0.44163277,0.57633469]) &gt; $(date +%m%d%Y\(%H%M\)).txt &amp;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/POMDP_generate.py" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -80,41 +57,67 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="twoCol_NN_main_generalization" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="IRC_TwoSiteForaging" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/opt/anaconda3/bin/python3.8" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/twoCol_NN_main_generalization.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.twoCol_NN_main_generalization" />
+      <item itemvalue="Python.POMDP_generate" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.twoboxCol_mainAmijio" />
+        <item itemvalue="Python.POMDP_generate" />
+        <item itemvalue="Python.twoCol_NN_main_generalization" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="10c326ab-5958-4180-b018-112a4ba0a1b3" name="Default" comment="" />
-      <created>1558041305392</created>
+      <changelist id="f4f42286-6f5e-4324-918e-6b77aa5345dd" name="Default Changelist" comment="" />
+      <created>1619194545291</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1558041305392</updated>
-      <workItem from="1575303282216" duration="3888000" />
-      <workItem from="1579550310441" duration="1000" />
+      <updated>1619194545291</updated>
+      <workItem from="1619194556701" duration="5888000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/IRC_TwoSiteForaging$twoCol_NN_main_generalization.coverage" NAME="twoCol_NN_main_generalization Coverage Results" MODIFIED="1619195219808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IRC_TwoSiteForaging$POMDP_generate.coverage" NAME="POMDP_generate Coverage Results" MODIFIED="1619196912849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
