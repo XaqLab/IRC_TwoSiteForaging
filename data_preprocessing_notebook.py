@@ -12,6 +12,7 @@ all output data also will be located in data folder.
 
 
 def data_preprocessing_notebook( idx,
+                                 datestring_IRC,
                                  datestring_train,
                                  datestring_data,
                                  datestring_NNagent,
@@ -39,7 +40,7 @@ def data_preprocessing_notebook( idx,
         #dataN_pkl_file_IRC = open('./data/01072020(143650)_data01072020(142210)_agentNN01072020(155832)_IRC2_twoboxCol.pkl',
         #                      'rb')
         dataN_pkl_file_IRC = open(path + '/Results/' + datestring_train + '_data' + datestring_data +
-                                  '_agentNN' + datestring_NNagent + '_IRC' + str(idx) + '_twoboxCol' + '.pkl', 'rb')
+                                  '_agentNN' + datestring_NNagent + '_' + datestring_IRC + 'IRC' + str(idx) + '_twoboxCol' + '.pkl', 'rb')
 
         dataN_pkl_agent = pickle.load(dataN_pkl_file_agent)
         dataN_pkl_file_agent.close()
@@ -174,7 +175,7 @@ def data_preprocessing_notebook( idx,
         # dataN_pkl_file_IRC = open('./data/01072020(143650)_data01072020(142210)_agentNN01072020(155832)_IRC2_twoboxCol.pkl',
         #                      'rb')
         dataN_pkl_file_IRC = open(path + '/Results/' + datestring_train + '_data' + datestring_data +
-                                  '_agentNN' + datestring_NNagent + '_IRC' + str(idx) + '_twoboxCol' + '.pkl', 'rb')
+                                  '_agentNN' + datestring_NNagent + '_' + datestring_IRC + 'IRC' + str(idx) + '_twoboxCol' + '.pkl', 'rb')
 
         dataN_pkl_agent = pickle.load(dataN_pkl_file_agent)
         dataN_pkl_file_agent.close()
