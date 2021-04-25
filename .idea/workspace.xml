@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4f42286-6f5e-4324-918e-6b77aa5345dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/IRC_TwoSiteForaging.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Code0516.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/POMDP_generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/POMDP_generate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boxtask_func.py" beforeDir="false" afterPath="$PROJECT_DIR$/boxtask_func.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twoCol_NN_main_generalization.py" beforeDir="false" afterPath="$PROJECT_DIR$/twoCol_NN_main_generalization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twoboxCol.py" beforeDir="false" afterPath="$PROJECT_DIR$/twoboxCol.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1619194545291</updated>
       <workItem from="1619194556701" duration="5888000" />
+      <workItem from="1619383547879" duration="479000" />
     </task>
     <servers />
   </component>
@@ -115,6 +108,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IRC_TwoSiteForaging$twoCol_NN_main_generalization.coverage" NAME="twoCol_NN_main_generalization Coverage Results" MODIFIED="1619195219808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

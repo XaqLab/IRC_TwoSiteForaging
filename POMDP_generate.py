@@ -7,7 +7,7 @@ path = os.getcwd()
 
 
 def twoboxColGenerate(parameters, parametersExp, sample_length, sample_number, nq, nr = 2, nl = 3, na = 5,
-                      discount = 0.99):
+                      discount = 0.99, save = True):
     """
     Generate data of the teacher POMDPS
     """
@@ -78,9 +78,6 @@ def twoboxColGenerate(parameters, parametersExp, sample_length, sample_number, n
                  'beliefs': latN,
                  'trueStates': truthN,
                  'allData': dataN}
-    data_output = open(path + '/Results/' + datestring + '_dataN_twoboxCol' + '.pkl', 'wb')
-    pickle.dump(data_dict, data_output)
-    data_output.close()
 
     ### write all model parameters to file
     para_dict = {'discount': discount,
@@ -112,12 +109,17 @@ def twoboxColGenerate(parameters, parametersExp, sample_length, sample_number, n
                  'sample_number': sample_number
                  }
 
-    # create a file that saves the parameter dictionary using pickle
-    para_output = open(path + '/Results/' + datestring + '_para_twoboxCol' + '.pkl', 'wb')
-    pickle.dump(para_dict, para_output)
-    para_output.close()
+    if save:
+        # create a file that saves the parameter dictionary using pickle
+        para_output = open(path + '/Results/' + datestring + '_para_twoboxCol' + '.pkl', 'wb')
+        pickle.dump(para_dict, para_output)
+        para_output.close()
 
-    print('Data stored in files')
+        data_output = open(path + '/Results/' + datestring + '_dataN_twoboxCol' + '.pkl', 'wb')
+        pickle.dump(data_dict, data_output)
+        data_output.close()
+
+        print('Data stored in files')
 
     return obsN, latN, truthN, datestring
 
