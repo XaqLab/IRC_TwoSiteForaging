@@ -16,7 +16,7 @@ def data_preprocessing_notebook( idx,
                                  datestring_train,
                                  datestring_data,
                                  datestring_NNagent,
-                                 POMDP = False, ENCODING = False, DECODING = True, RECODING = True, NEURAL_NUM = 100,
+                                 POMDP = False, ENCODING = False, DECODING = True, RECODING = True, NEURAL_NUM = 100
                                  ):
     #
     # POMDP = False # True if you use pomdp data. False if you use neural data (data structure is different)
@@ -47,6 +47,7 @@ def data_preprocessing_notebook( idx,
 
         dataN_pkl_IRC = pickle.load(dataN_pkl_file_IRC)
         dataN_pkl_file_IRC.close()
+
 
         bbelief = np.dstack([dataN_pkl_IRC['belief1_est_MAP'], dataN_pkl_IRC['belief2_est_MAP']])
         # behavior belief, 1x1000x2, and here 2 means belief for two boxes.
@@ -192,6 +193,8 @@ def data_preprocessing_notebook( idx,
         r = neural_response.reshape(-1, NEURAL_NUM)  # NEURAL_NUM neurons
 
         nbelief = read_csv('./data/nb_df.csv').to_numpy().reshape(bbelief.shape)
+
+        print(nbelief.shape)
         # This should have the same shape as bbelief, and corresponds to estimation of bbelief
         nb = nbelief.reshape(-1, 2)
 
@@ -210,6 +213,7 @@ def data_preprocessing_notebook( idx,
             policy_POMDP = dataN_pkl_agent['POMDP_agent_dist'][idx:idx+1, :, :5].squeeze()
             belief_POMDP = dataN_pkl_agent['POMDP_agent'][idx:idx+1, :, 1:3].squeeze()
 
+            print(nb.shape, location.shape)
             #a[np.where(np.logical_and(a == 4 & location == 0) == True)[0]] = 0
 
             # decoding_data = np.concatenate((bb, a, location), axis=1)

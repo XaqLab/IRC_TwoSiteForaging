@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4f42286-6f5e-4324-918e-6b77aa5345dd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IRC-encoding-recoding-decoding.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/IRC-encoding-recoding-decoding.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NNagent_IRC_01262020(170602).ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/NNagent_IRC_01262020(170602).ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NNagent_IRCfromFile-01262020(170602).ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/NNagent_IRCfromFile-01262020(170602).ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/r_df.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/r_df.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_preprocessing_notebook.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_preprocessing_notebook.py" afterDir="false" />
@@ -118,7 +121,7 @@
       <option name="presentableId" value="Default" />
       <updated>1619194545291</updated>
       <workItem from="1619194556701" duration="5888000" />
-      <workItem from="1619383547879" duration="4300000" />
+      <workItem from="1619383547879" duration="6421000" />
     </task>
     <servers />
   </component>
