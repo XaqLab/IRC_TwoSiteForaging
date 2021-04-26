@@ -28,6 +28,9 @@ pip install pymdptoolbox
 * twoCol_NN_model_generalization.py
   define neural network architectures for imitation learning 
   
+* twoCol_NN_data_utils.py
+  functions to format the training data for neural network agent
+
 * twoCol_NN_train_generalization.py
   train the neural network with ensambles of POMDP teachers with different tasks
   
@@ -38,10 +41,15 @@ pip install pymdptoolbox
   main file for teacher data generating, neural network training, and neural network behavior data generating. 
   Three timestamps are recorded in this file: time when the teacher POMDP data is generated, time when the neural netowrk is trained, time when the neural network runs in a closed-loop for behaviro analysis. 
   
+* data_preprocessing_notebook.py
+  preprocess IRC data for further neural analysis
+  
+
 * NNagent_IRC_01262020(170602).ipynb
   The notebook that runs the inverse rational control(IRC) and saves the results. 
   The timestamps from the twoCol_NN_main_generalization.py file will be used to indicate the data that is used. By passing the correspinding timestamps, the specific data will be used to run the IRC. 
   
  * NNagent_IRCfromFile-01262020(170602).ipynb
   Since it takes a long time to run the IRC algorithms. If one would like to check the IRC results based on the saved IRC results file, runing this file generates the figures. 
+   This notebook includes the neural analysis part as well. You would expect to see the neural coding results at the end of the notebook.
   
