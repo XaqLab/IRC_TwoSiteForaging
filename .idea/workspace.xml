@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f4f42286-6f5e-4324-918e-6b77aa5345dd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NNagent_IRC_01262020(170602).ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/NNagent_IRC_01262020(170602).ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NNagent_IRCfromFile-01262020(170602).ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/NNagent_IRCfromFile-01262020(170602).ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HMMtwoboxCol.py" beforeDir="false" afterPath="$PROJECT_DIR$/HMMtwoboxCol.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +117,7 @@
       <updated>1619194545291</updated>
       <workItem from="1619194556701" duration="5888000" />
       <workItem from="1619383547879" duration="10370000" />
-      <workItem from="1619971508783" duration="4909000" />
+      <workItem from="1619971508783" duration="6436000" />
     </task>
     <servers />
   </component>

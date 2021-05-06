@@ -10,7 +10,7 @@ pb = 4  # pb  = push button
 
 class HMMtwoboxCol:
     def __init__(self, A, B, C, D1, D2, pi, Ncol):
-        self.A = A
+        self.A = A # transition matrix
         self.B = B
         self.C = C  # (Trans_hybrid_obs12, belief transition given color and action)
         self.D1 = D1  # (box1, Obs_emis.dot(Trans_state, to calculate oberservation emission)
@@ -27,7 +27,7 @@ class HMMtwoboxCol:
         return np.squeeze(l * self.S * self.R + tensorsum(temp * self.R * self.Ss, r * self.Ss + temp)).astype(int)
 
     def forward_scale(self, obs):
-
+        # probability of latent at time t given observations from the beginning to time t
         T = obs.shape[0]  # length of a sample sequence
 
         act = obs[:, 0]  # action, two possible values: 0: doing nothing; 1: press button
@@ -58,6 +58,9 @@ class HMMtwoboxCol:
         return alpha, scale
 
     def backward_scale(self, obs, scale):
+        # likelihood of latent at t given observations from time t+1 till the end
+        # in other words, the probability of observations from time t+1 till the end given latent at t
+
         T = obs.shape[0]  # length of a sample sequence
 
         act = obs[:, 0]  # 0: doing nothing; 1: press button
@@ -84,12 +87,16 @@ class HMMtwoboxCol:
         return beta
 
     def compute_gamma(self, alpha, beta):
+        # The posterior  of latent variables given the whole sequence of observations
+
         gamma = alpha * beta
         gamma = gamma / np.sum(gamma, 0)
 
         return gamma
 
     def compute_xi(self, alpha, beta, obs):
+        # joint probability of latent at time t and t+1 given the whole sequence of observations
+
         T = obs.shape[0]  # length of a sample sequence
 
         act = obs[:, 0]  # 0: doing nothing; 1: press button
@@ -115,6 +122,7 @@ class HMMtwoboxCol:
         return xi
 
     def latent_entr(self, obs):
+        # the entropy of the sequence of latent variables
         T = obs.shape[0]  # length of a sample sequence
 
         act = obs[:, 0]  # 0: doing nothing; 1: press button
